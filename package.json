@@ -1,0 +1,22 @@
+{
+	"name": "pizza-problem",
+	"version": "1.0.0",
+	"homepage": "https://github.com/Unit2795/pizza-problem#readme",
+	"bugs": {
+		"url": "https://github.com/Unit2795/pizza-problem/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Unit2795/pizza-problem.git"
+	},
+	"license": "ISC",
+	"author": "",
+	"main": "index.ts",
+	"scripts": {
+		"original": "tsx original.ts",
+		"iter1": "tsx iterations/iteration-1.ts"
+	},
+	"devDependencies": {
+		"tsx": "^4.20.6"
+	}
+}
