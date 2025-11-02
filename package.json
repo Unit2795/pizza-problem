@@ -14,9 +14,14 @@
 	"main": "index.ts",
 	"scripts": {
 		"original": "tsx original.ts",
-		"iter1": "tsx iterations/iteration-1.ts"
+		"iter1": "tsx iterations/iteration-1.ts",
+		"iter2": "tsx iterations/iteration-2.ts",
+		"iter3": "tsx iterations/iteration-3.ts",
+		"typecheck": "tsc --noEmit"
 	},
 	"devDependencies": {
-		"tsx": "^4.20.6"
+		"@types/node": "^24.9.2",
+		"tsx": "^4.20.6",
+		"typescript": "^5.9.3"
 	}
 }
