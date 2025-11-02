@@ -8,6 +8,8 @@ The most basic first version of this problem does not worry about:
 - Calculating when orders will be ready.
 - Calculating the timeline, this is pre-calculated and provided as input data. Though it may be better to dynamically populate this from items as they are added as opposed to hard-coded.
 
+The last version of the solution DOES include these additional features.
+
 ## Files:
 
 - `original.ts` contains the original problem to be solved
@@ -15,9 +17,11 @@ The most basic first version of this problem does not worry about:
 
 ## Usage
 
-You'll need Node.js installed to run the code. You'll also need to run `npm install` to get the dependencies.
+- You'll need Node.js installed to run the code. 
 
-In the package.json, you can run each of the solution iterations to see their output. For example:
+- Run `npm install` in the repo root to install the dependencies.
+
+- In the `package.json`, you can run each of the solution iterations to see their output. For example:
 
 ```bash
 npm run iter1
