@@ -187,8 +187,6 @@ const simulate = async (orders: SimulatedOrder[], tickDelayMs: number = 0) => {
 		ordersAtThisTime.forEach((order) => addOrder(order));
 
 		if (tickDelayMs !== 0) {
-			console.log("go");
-
 			// Simulate real-time passage
 			await sleep(tickDelayMs);
 		}
