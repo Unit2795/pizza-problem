@@ -96,15 +96,9 @@ const calculateOvenUsageTimeSeries = (windowSize: number = 10) => {
 			startTime: windowStart,
 			endTime: windowEnd - 1,
 			usedTime: totalOvenMinutes,
+			utilization: `${Math.round((totalOvenMinutes / (OVEN_CAPACITY * windowSize)) * 100)}%`,
 		});
 	}
-
-	console.log(
-		"timeseries total: ",
-		timeSeries.reduce((total, value) => {
-			return total + value.usedTime;
-		}, 0)
-	);
 
 	return timeSeries;
 };
@@ -212,12 +206,8 @@ const cookPizzas = () => {
 const simulate = async (orders: SimulatedOrder[], tickDelayMs: number = 0) => {
 	console.log("==== Pizza Shop is Open! ====\n");
 
-	// Determine the maximum time we'll simulate to by seeing when the last order is
-	// TODO: This wont actually wait to finish cooking the last pizzas. Can fix later.
-	const maxTime = Math.max(...orders.map((order) => order.orderTime));
-
-	// Simple game loop, ticking through each minute
-	for (let time = 0; time <= maxTime; time++) {
+	// Simple game loop, ticking through each minute until all pizzas are completed
+	for (let time = 0; completedPizzas.length < pizzaOrders.length; time++) {
 		// Advance the time
 		currentTime = time;
 
