@@ -1,9 +1,7 @@
 /* 
-	In this iteration, I try to model a very simple pizza shop. Orders cook in a limited number of ovens and we predict when an order will be done as soon as it arrives.
+	In this iteration, a simple pizza shop is simulated. Orders cook in a limited number of ovens and we predict when an order will be done. Like the original problem, we produce a time series with information about home much "oven time" was used for each time period. The time series is no longer hardcoded though, it's generated dynamically from order data.
 
-	This iteration isn't really the same class of problem as the other two, where we are trying to analyze usage over a time series. This instead runs with the pizza shop analogy and instead tries to manage a limited number of ovens and producing an estimate for when a pizza will be done.
-
-	This pizza analogy is useful for thinking about task scheduling and queue theory; which is common in distributed computing, parallelism, and job queues. Ovens can only hold so many pizzas and we want to reduce the amount of time it takes for people to receive their orders. This code doesn't "look ahead" to actually schedule the specific oven that a pizza will go to, though in a production scenario that would probably be useful.
+	This pizza analogy is useful for thinking about task scheduling and queue theory; which is common in distributed computing, parallelism, and job queues. Ovens can only hold so many pizzas and we want to reduce the amount of time it takes for people to receive their orders. This code doesn't "look ahead" to actually schedule the specific oven that a pizza will go to, though in a production scenario that would probably be useful and is common in job scheduling.
 
 	Code Overview:
 	- A simple game loop advances simulated time and places orders.
