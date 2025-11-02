@@ -165,6 +165,9 @@ const addOrder = (order: SimulatedOrder) => {
 		cookEndTime: endTime,
 		idleTime,
 	});
+
+	// If there is room in the ovens, add next pizzas
+	cookPizzas();
 };
 
 // Process cooking pizzas based on oven capacity
@@ -214,9 +217,6 @@ const simulate = async (orders: SimulatedOrder[], tickDelayMs: number = 0) => {
 
 		// Place the orders
 		ordersAtThisTime.forEach((order) => addOrder(order));
-
-		// If there is room in the ovens, add next pizzas
-		cookPizzas();
 
 		if (tickDelayMs !== 0) {
 			// Simulate real-time passage
